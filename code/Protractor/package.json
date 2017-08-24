@@ -1,0 +1,43 @@
+{
+  "name": "eps-protractor",
+  "version": "1.0.0",
+  "description": "EPS Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "startSE": "node node_modules/protractor/bin/webdriver-manager start",
+    "setupSE": "npm install && node node_modules/protractor/bin/webdriver-manager update",
+    "updateSE": "node node_modules/protractor/bin/webdriver-manager update --versions.chrome 2.29",
+    "version": "protractor --version",
+    "elementor": "elementor https://ftw-eps-team-03.nhsrx.com:58445/eps-web/index.html --nonAngular",
+    "test": "protractor protractor.conf.js",
+    "db": "protractor --baseUrl https://ftw-eps-team-03.nhsrx.com:58445/eps-web/index.html protractor.conf.js --suite db",
+    "login": "protractor --baseUrl https://ftw-eps-team-03.nhsrx.com:58445/eps-web/index.html protractor.conf.js --suite login",
+    "vlogin": "protractor --baseUrl https://qa.careskore.com protractor.conf.js --suite vlogin",
+    "search": "protractor --baseUrl https://ftw-eps-team-02.nhsrx.com:58445/eps-web/index.html protractor.conf.js --suite search",
+    "header": "protractor --baseUrl https://ftw-eps-team-03.nhsrx.com:58445/eps-web/index.html protractor.conf.js --suite header",
+    "patientpage": "protractor --baseUrl https://ftw-eps-team-03.nhsrx.com:58445/eps-web/index.html protractor.conf.js --suite page"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "EPS",
+    "Automation"
+  ],
+  "author": "Neha Bhargava",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^5.1.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "jasmine-core": "^2.6.4",
+    "jasmine-spec-reporter": "^2.4.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "protractor-jasmine2-screenshot-reporter": "~0.3.0",
+    "selenium-webdriver": "^2.46.1"
+  }
+}
